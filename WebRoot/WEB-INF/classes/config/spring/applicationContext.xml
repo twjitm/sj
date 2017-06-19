@@ -1,0 +1,130 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:p="http://www.springframework.org/schema/p"
+	xmlns:tx="http://www.springframework.org/schema/tx"
+	xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:jaxws="http://cxf.apache.org/jaxws"
+	xsi:schemaLocation="http://www.springframework.org/schema/aop http://www.springframework.org/schema/aop/spring-aop-4.0.xsd
+		http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://cxf.apache.org/jaxws http://cxf.apache.org/schemas/jaxws.xsd
+		http://www.springframework.org/schema/tx http://www.springframework.org/schema/tx/spring-tx-4.0.xsd
+		http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+    <!--需要引入的配置文件
+			<import resource="classpath:META-INF/cxf/cxf.xml"/>
+			<import resource="classpath:META-INF/cxf/cxf-extension-soap.xml"/>
+			<import resource="classpath:META-INF/cxf/cxf-servlet.xml"/>
+--> 
+		<context:component-scan base-package="com.sj.*" />
+		<!-- 开启注释处理器 -->
+		<context:annotation-config />
+		<!-- 配置数据源 -->
+		<context:property-placeholder location="classpath*:config/spring/jdbc.properties" />
+	<!-- 配置数据源 -->
+	<bean id="dataSource" class="org.springframework.jdbc.datasource.DriverManagerDataSource" >
+		<property name="driverClassName" value="com.mysql.jdbc.Driver"></property>
+		<property name="url" value="jdbc:mysql://127.0.0.1:3306/sj"></property>
+		<property name="username" value="root"></property>
+	<!-- <property name="password" value="sunjing"></property> -->
+ </bean>
+	<!--   <bean id="dataSource" class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="driverClass" value="${jdbc.driverClassName}" />
+		<property name="jdbcUrl" value="${jdbc.url}" />
+		<property name="user" value="${jdbc.username}" />
+		<property name="password" value="${jdbc.password}" />
+		<property name="maximumConnectionCount" value="${proxool.maxConnCount}" />
+		<property name="minimumConnectionCount" value="${proxool.minConnCount}" />
+		<property name="statistics" value="${proxool.statistics}" />
+		<property name="simultaneousBuildThrottle" value="${proxool.simultaneousBuildThrottle}" />
+		<property name="trace" value="${proxool.trace}" />
+		<property name="verbose" value="${proxool.verbose}"  />
+		
+	</bean> -->
+	<!-- 开启文件上  -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="dataSource"><ref bean="dataSource" /></property>
+		<!-- 扫描实体（pojo） -->
+		<property name="namingStrategy">
+		<bean class="org.hibernate.cfg.ImprovedNamingStrategy"></bean>
+		</property>
+		<property name="hibernateProperties">
+			<!-- 这个是以前的配置方法<props>
+				<prop key="hibernate.hbm2ddl.auto">${hibernate.hbm2ddl.auto}</prop>
+				<prop key="hibernate.dialect">${hibernate.dialect}</prop>
+				<prop key="hibernate.show_sql">${hibernate.show_sql}</prop>
+				<prop key="hibernate.format_sql">${hibernate.format_sql}</prop>
+			</props> -->
+			<props>
+			<prop key="hibernate.show_sql">org.hibernate.dialect.MySQLInnoDBDialect</prop>
+<!-- 			<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect</prop> -->
+			<prop key="hibernate.show_sql">false</prop>
+			<prop key="hibernate.format_sql">true</prop>
+			<prop key="hibernate.hbm2ddl.auto">update</prop>
+			
+			</props>
+		</property>
+		<!-- 自动扫描实体包 -->
+		<property name="packagesToScan">
+			<list>
+				<value>com.sj.entity</value>
+				<!-- <value>com.twj.tjxt.*.entity</value> -->
+			</list>
+		</property>
+	</bean>
+	<!-- 实物管理器 -->
+	<bean id="transactionManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+	
+	<tx:advice id="transactionAdvice" transaction-manager="transactionManager">
+		<!-- spring事物管理 -->
+		<tx:attributes>
+		
+			<tx:method name="add*" />
+			<tx:method name="save*" />
+			<tx:method name="Save*" />
+			<tx:method name="update*" />
+			<tx:method name="modify*" />
+			<tx:method name="edit*" />
+			<tx:method name="delete*" />
+			<tx:method name="remove*" />
+			<tx:method name="change*" />
+			<tx:method name="repair" />
+			<tx:method name="deleteAndRepair" />
+			<tx:method name="login*" />
+			<tx:method name="get*" propagation="SUPPORTS" />
+			<tx:method name="find*" propagation="SUPPORTS" />
+			<tx:method name="load*" propagation="SUPPORTS" />
+			<tx:method name="search*" propagation="SUPPORTS" />
+			<tx:method name="datagrid*" propagation="SUPPORTS" />
+			<tx:method name="*" propagation="SUPPORTS" />
+			<!-- 为hibernate添加事物管理 -->
+			<tx:method name="get*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED"/>
+			<tx:method name="up*" propagation="REQUIRED" />
+			<tx:method name="delete*" propagation="REQUIRED"/>
+            <tx:method name="count*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="find*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="list*" propagation="REQUIRED" read-only="true" />
+            <tx:method name="*" propagation="REQUIRED" />
+		</tx:attributes>
+	
+	</tx:advice>
+	<!-- 切入点 -->
+	<aop:config proxy-target-class="true">
+		<aop:pointcut id="transactionPointcut" expression="execution(* com.sj.service.Impl.*.*(..))" />
+		<aop:advisor pointcut-ref="transactionPointcut"
+			advice-ref="transactionAdvice" />
+	</aop:config>
+	<!-- <aop:config proxy-target-class="true">
+		<aop:pointcut id="transactionPointcut1" expression="execution(* com.twj.tjxt.*.service.Impl.*.*(..))" />
+		<aop:advisor pointcut-ref="transactionPointcut1"
+			advice-ref="transactionAdvice" />
+	</aop:config> -->
+	<!-- 注解方式配置事物 -->
+	<tx:annotation-driven transaction-manager="transactionManager"/>
+	<!-- <tx:annotation-driven transaction-manager="transactionManager1"/> -->
+	</beans>

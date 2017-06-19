@@ -1,0 +1,41 @@
+@charset "utf-8";
+body,dl,dd,h1,h2,h3,h4,h5,h6,p,form,ol,ul{margin:0;padding:0;font-family:"Microsoft YaHei",arial;}
+body{color:#282828;background-color:#FFF;font-size:14px;position:relative;background-attachment:fixed;}
+article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary {display:block;}
+a,button,input{outline-style:none;-webkit-tap-highlight-color:rgba(255,0,0,0);}
+ol,ul,dl,dd,dt,li{list-style:none;}
+blockquote,q{quotes:none;}
+:focus{outline:0;}
+ins{text-decoration:none;}
+del{text-decoration:line-through;}
+img{vertical-align:top;border:0;}
+a{color:#282828;text-decoration:none;blr:expression(this.onFocus=this.blur());outline:none;}
+a:hover{text-decoration:none;}
+input,textarea{font-size:12px;outline:0 none;padding:0;margin:0;}
+h1,h2,h3,h4,h5,h6 {font-weight:normal;font-size:100%;}
+em,i,s{font-weight:normal;font-style:normal;}
+table {border-collapse:collapse;border-spacing:0;}
+.middle{width:1000px;margin:0 auto;position:relative;}
+.relative{position:relative;}
+.fl{float:left;}
+.fr{float:right;}
+.cle{overflow:hidden;zoom:1;}
+.ft12{font-size:12px;}
+.ft13{font-size:13px;}
+.ft14{font-size:14px;}
+.ft16{font-size:16px;}
+.ft18{font-size:18px;}
+.ft20{font-size:20px;}
+.col-red{color:#ec6654;}
+.col-blue{color:#6a91da;}
+.col-yellow{color:#e97e06;}
+.col-gray{color:#b5b5b5;}
+.bg-red{background-color:#ec6654;}
+.bg-blue{background-color:#6a91da;}
+.bg-gray{background-color:#b5b5b5;}
+.clear{zoom:1;}
+.clear:after{content:".";height:0;visibility:hidden;display:block;clear:both;}
+.cleardiv{clear:both;height:0px;line-height:0px;font-size:0px;}
+.dot{overflow:hidden;white-space:nowrap;text-overflow:ellipsis;}
+.max-height{max-height:600px;overflow-y:auto;}
+

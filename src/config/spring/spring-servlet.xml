@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	 xmlns:context="http://www.springframework.org/schema/context"
+	xmlns:mvc="http://www.springframework.org/schema/mvc" 
+	xmlns:websocket="http://www.springframework.org/schema/websocket"
+	xsi:schemaLocation="http://www.springframework.org/schema/mvc
+	 http://www.springframework.org/schema/mvc/spring-mvc-4.0.xsd
+		http://www.springframework.org/schema/websocket
+		 http://www.springframework.org/schema/websocket/spring-websocket-4.0.xsd
+		http://www.springframework.org/schema/beans
+		 http://www.springframework.org/schema/beans/spring-beans-4.0.xsd
+		http://www.springframework.org/schema/context
+		 http://www.springframework.org/schema/context/spring-context-4.0.xsd">
+	<!-- 注解扫描包 -->
+	<context:component-scan base-package="com.sj.*" />
+	
+	<bean id="mappingJacksonHttpMessageConverter"
+		class="org.springframework.http.converter.json.MappingJackson2HttpMessageConverter" />
+	<bean id="annotationMethodHandlerAdapter"
+		class="org.springframework.web.servlet.mvc.annotation.AnnotationMethodHandlerAdapter">
+		<property name="messageConverters">
+			<list>
+				<ref bean="mappingJacksonHttpMessageConverter" />
+			</list>
+		</property>
+	</bean>
+
+    <!-- 开启注解 -->
+	<mvc:annotation-driven />
+	<!-- 静态资源(js/image)的访问 -->
+	<mvc:resources location="/js/" mapping="/js/**" />
+	<mvc:resources location="/file/" mapping="/file/**" />
+	<mvc:resources location="/css/" mapping="/css/**" />
+	<mvc:resources location="/img/" mapping="/img/**" />
+	<mvc:resources location="/images/" mapping="/images/**" />
+	<!-- 上传文件的管理 -->
+<!-- 	<mvc:resources location="/upfile/" mapping="/upfile/**" />
+	<mvc:resources location="//" mapping="/*.html" /> -->
+	<!--自定义拦截器 -->
+	<!-- <bean id="myHandShakeInterceptor" class="com.twj.interceptor.MyHandShakeInterceptor"></bean> -->
+	<!--  <mvc:interceptors>
+		<mvc:interceptor>
+			拦截所有的controller
+			<mvc:mapping path="/**" /> 
+			<mvc:exclude-mapping path="/**"/>
+			<bean class="com.twj.interceptor.CommonInterceptor"></bean> 
+		   <ref bean="myHandShakeInterceptor"/>
+	     </mvc:interceptor> 
+		<bean class="com.twj.interceptor.CommonInterceptor"></bean>
+		当设置多个拦截器时，先按顺序调用preHandle方法，然后逆序调用每个拦截器的postHandle和afterCompletion方法
+	 </mvc:interceptors> -->
+
+	<!-- 定义视图解析器 -->
+	<bean id="viewResolver"
+		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
+		<property name="prefix" value="/WEB-INF/jsp/"></property>
+		<property name="suffix" value=".jsp"></property>
+		<property name="viewClass"
+			value="org.springframework.web.servlet.view.JstlView"></property>
+	</bean>
+
+	<!-- 上传文件的配置 -->
+	<bean id="multipartResolver"
+		class="org.springframework.web.multipart.commons.CommonsMultipartResolver">
+		<property name="maxUploadSize">
+			<value>100000000</value>
+		</property>
+		<property name="defaultEncoding">
+			<value>UTF-8</value>
+		</property>
+	</bean>
+	<!-- 总错误处理 -->
+	<bean
+		class="org.springframework.web.servlet.handler.SimpleMappingExceptionResolver"
+		id="exceptionResolver">
+		<property name="defaultErrorView">
+			<value>error</value>
+		</property>
+		<property name="defaultStatusCode">
+			<value>500</value>
+		</property>
+		<property name="warnLogCategory">
+			<value>org.springframework.web.servlet.handler.SimpleMappingExceptionResolver
+			</value>
+		</property>
+	</bean>
+
+</beans>

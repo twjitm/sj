@@ -1,0 +1,350 @@
+*{
+	padding:0;
+	margin:0;
+	font-size:12px;
+	font-size:1.2rem;
+	font-family:"寰蒋闆呴粦";
+}
+a{
+	text-decoration: none;
+
+}
+/*鐎佃壈鍩呴惃鍕炊閺嶅洨些閸斻劋绗傞崢鑽ゆ畱閺傝顢�/
+.big .daohang ul li a:hover{
+
+	color:#000;
+	width:95px;
+	height:40px;
+	background:#F8F8F8;
+	border-radius: 5px;
+	text-decoration: none;
+}	
+.big .daohang  ul li.current a{
+	color:#000;
+}
+
+/*閸旂姷娈戦弨鍦畱娑撴粏銈�閻ュ懍姹夐弻銉嚄*/
+.big{
+	overflow: hidden;
+	width: 1349px;
+	font-size:12px;
+	font-size:1.2rem;
+	background:#F8F8F8;
+	font-family:"瀵邦喛钂嬮梿鍛寸拨";
+	
+}
+.daohang{
+	float: left;
+	width:200px;
+	min-height: 500px;
+	background-color: #48d1cc;
+}
+.big .daohang ul li.con{
+	width: 200px;
+	background: #48d1cc;
+    
+    margin-left: -40px;
+    height: 170px;
+}
+.big .daohang ul li.con img{
+	width: 90px;
+	height: 90px;
+	border-radius: 50%;
+}
+.big .daohang ul li.con span{
+	display: block;
+	margin-top: -13px;
+}
+.maincon{
+	width:1045px;
+	min-height: 700px;
+	background: #fff;
+	float: left; 
+	padding:50px;
+	margin-left: 200px;
+}
+.maincon .top h3{
+	font-size: 20px;
+	margin-bottom: 10px;
+}
+.maincon .content{
+
+}
+.maincon .content .content01{
+	height:50px;
+	margin-top: 5px;
+	/*background: #ccc;*/
+}
+.maincon .content .content01 label{
+	line-height: 50px;
+	margin-left: 30px;
+} 
+.maincon .content .content01 select{
+	width: 150px;
+	height: 30px;
+	margin-left: 10px;
+	border-radius:5px;
+	border:1px solid #6ec1f3;
+}
+.maincon .content .content01 input.patient_btn{
+	width: 90px;
+	height: 30px;
+	background: #6ec1f3;
+	color: #fff;
+	border:#6ec1f3;
+	border-radius: 5px;
+	outline: none;
+	cursor: pointer;
+	margin-left: 10px;
+	
+}
+.maincon .content .content01 .patient_name{
+	width:150px;
+	height:30px;
+	border:1px solid #6ec1f3;
+	padding-left:3px;
+	background:#fff;
+	border-radius:5px;
+}
+.maincon .content .content02{
+	padding:20px;
+}
+.maincon .content .content02 .tb01{
+	border-collapse: collapse;
+	width: 1000px;
+}
+.maincon .content .content02 .tb01 tr{
+	border:1px solid #ccc;
+	height: 50px;
+	text-align: center;
+	/*line-height: 50px;*/
+}
+.maincon .content .content02 .tb01 tr th{
+	height: 50px;
+	border:1px solid #ccc;
+	line-height: 50px;
+	
+}
+.maincon .content .content02 .tb01 tr td{
+	border:1px solid #ccc;
+}
+.maincon .content .content02 .tb01 .picture{
+	width: 50px;
+	height: 50px;
+	border-radius: 50%;
+}
+/*閺屻儳婀呮惔濠佺秴tb02*/
+.maincon .content .content02 .tb02{
+	border-collapse: collapse;
+	width: 500px;
+}
+.maincon .content .content02 .tb02 tr{
+	border:1px solid #ccc;
+	height: 50px;
+	text-align: center;
+	/*line-height: 50px;*/
+}
+.maincon .content .content02 .tb02 tr th{
+	height: 50px;
+	border:1px solid #ccc;
+	line-height: 50px;
+	
+}
+.maincon .content .content02 .tb02 tr td{
+	border:1px solid #ccc;
+}
+/*閻ュ懍姹夌拠锔剧矎*/
+.big .maincon .content .content_patient{
+	padding:30px;
+}
+.big .maincon .content .content_patient .op01{
+	
+	
+}
+.big .maincon .content .content_patient .op01 img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 10px 0 10px 125px;
+}
+.big .maincon .content .content_patient .op01 input{
+	margin-bottom: 10px;
+	margin-left: 235px;
+}
+.big .maincon .content .content_patient .op{
+	height: 50px;
+	
+}
+.big .maincon .content .content_patient .op label{
+	display: inline-block;
+	width: 100px;
+	height: 50px;
+	line-height: 50px;
+	text-align: right;
+	margin-right: 10px;
+}
+.big .maincon .content .content_patient .op span{
+	
+}
+.big .maincon .content .content_patient .op input{
+	width: 200px;
+	height: 30px;
+	padding-left:5px;
+	border-radius: 5px;
+	border:1px solid #6ec1f3;
+}
+.big .maincon .content .content_patient .op select{
+	display:inline-block;
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	border:1px solid #6ec1f3;
+}  
+
+.big .maincon .content .content_patient .op02{
+	height: 50px;
+}
+.big .maincon .content .content_patient .op02 a.op02_btn{
+	display:inline-block;
+	margin-left: 20px;
+	margin-top: 20px;
+	width: 90px;
+	height: 30px;
+	background: #6ec1f3;
+	border-radius: 5px;
+	color: #fff;
+	line-height:30px;
+	text-align:center;
+	border:1px solid #6ec1f3;
+}
+/*閻╂垶濮㈡禍楦款嚊缂侊拷/
+.big .maincon .content .see_con .see_op01{
+	height: 100px;
+}
+.big .maincon .content .see_con .see_op01 img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 10px 0 10px 120px;
+}
+.big .maincon .content .see_con .see_op{
+	height: 50px;
+}
+.big .maincon .content .see_con .see_op label{
+	display: inline-block;
+	width: 150px;
+	line-height: 50px;
+	text-align: right;
+	margin-right: 10px;
+}
+.big .maincon .content .see_con .see_op span{
+	
+}
+/*閹躲倕锛嬫禍鍝勬喅娣団剝浼�/
+.big .maincon .content .nurse .nurse_op01{
+
+}
+.big .maincon .content .nurse .nurse_op01 img{
+	display: block;
+	width: 100px;
+	height: 100px;
+	margin: 10px 0 10px 125px;
+}
+.big .maincon .content .nurse .nurse_op01 input{
+	margin-left: 235px;
+	margin-bottom: 10px;
+	/*outline: none;
+	width: 90px;
+	height: 25px;
+	background: #6ec1f3;*/
+}
+.big .maincon .content .nurse .nurse_op label{
+	width: 150px;
+	height: 50px;
+	display: inline-block;
+	text-align: right;
+	margin-right: 10px;
+
+}
+.big .maincon .content .nurse .nurse_op span{
+
+
+}
+.big .maincon .content .nurse .nurse_op input{
+	width: 200px;
+	height: 30px;
+	border-radius: 5px;
+	padding-left: 5px;
+	border:1px solid #6ec1f3;
+}
+.big .maincon .content .nurse .nurse_op02 input{
+    margin-left: 10px; 
+	
+	width: 100px;
+	height: 30px;
+	background: #6ec1f3;
+	border-radius: 5px;
+	color: #fff;
+	border:1px solid #6ec1f3;
+	cursor:pointer;
+}
+.big .maincon .content .nurse .nurse_op02 a{
+	display:inline-block;
+	margin-left: 10px;
+	width: 100px;
+	height: 30px;
+	line-height:30px;
+	text-align:center;
+	background: #6ec1f3;
+	border-radius: 5px;
+	color: #fff;
+	border:1px solid #6ec1f3;
+}
+.big .maincon .content .nurse .nurse_op02 a.nurse_op02_a{
+	margin-left:100px;
+}
+.big .maincon .content .nurse .nurse_op02 input.nurse_op02_a2{
+	margin-left: 20px;
+	width: 100px;
+	height: 30px;
+	cursor:pointer;
+	background: #6ec1f3;
+	border-radius: 5px;
+	color: #fff;
+	border:1px solid #6ec1f3;
+}
+
+/*file閹稿鎸崇紘搴″*/
+.file {
+    position: relative;
+    display: inline-block;
+    background: #6ec1f3;
+    border: 1px solid #6ec1f3;
+    border-radius: 4px;
+    padding: 4px 12px;
+    overflow: hidden;
+    color: #fff;
+    text-decoration: none;
+    text-indent: 0;
+    line-height: 20px;
+    margin-left: 230px;
+    margin-bottom: 10px;
+}
+.file input {
+    position: absolute;
+    font-size: 100px;
+    right: 0;
+    top: 0;
+    opacity: 0;
+}
+.file:hover {
+    background: #AADFFD;
+    border-color: #78C3F3;
+    color: #004974;
+    text-decoration: none;
+}
+.error-tr{
+	background: #FF3030;
+	color:#fff;
+}
+

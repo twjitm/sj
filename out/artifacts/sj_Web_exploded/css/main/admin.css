@@ -1,0 +1,25 @@
+@charset "utf-8";
+/*管理首页 index*/
+input{outline:none;margin-bottom:0px;}
+.top_search .search_global{width:83%;color:#333;}
+.top_search .search_global_button:hover{opacity:0.8;};
+
+.home_blue2{margin-right:0px;}
+.home_tion_box{border:1px solid #dfdfdf;}
+.home_tion_box{width:30%;margin-right:17px;}
+.iV2notice{display:none;}
+.home_tion_box{margin-top:15px;}
+.ttzz_tion li:hover{background-color:#f9fdfc;}
+.right_menu li .span_promit{right:-8px;top:-11px;}
+
+/*站点管理*/
+.nav-tabs{margin:0;}
+.table th, .table td{vertical-align: center;}
+.btn{font-size:12px;padding:2px 10px;}
+.form-horizontal .control-label{margin-right:5px;}
+.formtable td{vertical-align: middle;}
+.hd_release_btn:hover{opacity:0.8;}
+.hd_save_btn:hover{opacity:0.8;}
+.dition_tt select{color:#333;}
+.hd_coner_list li{line-height:35px;}
+.hd_coner_list li a:hover{text-decoration:none;/*color:#f90*/}

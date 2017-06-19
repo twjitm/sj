@@ -1,0 +1,51 @@
+@charset "utf-8";
+/* CSS Document */
+html{
+	font-size:62.5%; /* 10÷16=62.5% */}
+body{
+	font-size:12px;
+	font-size:1.2rem;
+	background:#F8F8F8;
+	font-family:"微软雅黑";
+
+}
+.big .daohang ul{
+	width:100px;
+	margin:0 auto;
+	background: #48d1cc;
+	position:relative;
+	z-index:0;
+	padding:60px 20px 70px 0;
+}
+.big .daohang ul li{
+	height:40px;
+	line-height:40px;
+	text-align:center;
+	list-style-type: none;
+	/*border-bottom:1px solid #F8F8F8;*/
+}	
+.big .daohang ul li a{
+	color:#fff;
+	display:block;
+	font-size: 16px;
+}	
+/*ul li a:hover{
+	color:#000;
+	
+}	
+ul li a.hover{color:#000;}	*/
+#lanPos{
+	width:95px;
+	height:40px;
+	line-height:40px;
+	background:#F8F8F8;
+	border-radius: 5px;
+	/*border-left:5px solid #6ec1f3;*/
+	position:absolute;
+	/*left:-5px;*/
+	top:0;
+	z-index:-1;
+	transition:top .2s;
+}	
+
+/*time zhou*/

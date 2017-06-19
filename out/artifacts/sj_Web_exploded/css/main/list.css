@@ -1,0 +1,59 @@
+body,h1,h2,h3,h4,blockquote,p,dl,dt,dd,ul,ol,li,th,td, form,fieldset,legend,button,input,textarea{margin:0;padding:0}
+body,button,input,select,textarea{font:12px/1.5 \5b8b\4f53,arial,sans-serif}
+body{color:#000;background:#ffffff;}
+button,input,select,textarea,h1,h2,h3,h4{font-size:100%}
+em,i{font-style:normal}ol,ul{list-style:none}
+img,fieldset{border:0;vertical-align:middle}
+.clearfix:after{content:"\20";clear:both;height:0;display:block;overflow:hidden}.clearfix{*zoom:1}
+.clear{font-size:0;line-height:0;height:0;overflow:hidden;clear:both;visibility:hidden}
+.fl,.mark{float:left}.fr,.subMark{float:right}
+.spanclass,.contentdiv{display:none}
+a{color:#000;text-decoration:none}a:hover{color:#884400;text-decoration:underline}
+.mb10{margin-bottom:10px;}
+.f14{font-size:14px;}
+.f16{font-size:16px;}
+.cp{cursor:pointer;}
+/* scrolltab */
+.scrolltab{position:relative;width:990px;margin:0 auto;}
+.scrolltab .ulBigPic{width:868px;height:444px;padding:20px 60px 0;overflow:hidden;}
+.scrolltab .ulBigPic li{width:868px;height:444px;display:none;}
+.scrolltab .ulBigPic .liSelected{display:block;}
+.scrolltab .ulBigPic img{border:1px solid #dedede;padding:2px;background-color:#fff;}
+.scrolltab .ulBigPic .sPic{width:570px;float:left;overflow:hidden;}
+.scrolltab .ulBigPic .sSideBox{width:290px;float:right;overflow:hidden;}
+.scrolltab .sSideBox span{width:290px;display:block;overflow:hidden;}
+.scrolltab .ulBigPic .sTitle{height:32px;line-height:32px;font-size:14px;font-weight:700;color:#333;}
+.scrolltab .ulBigPic .sIntro{line-height:24px;color:#666;word-wrap:break-word;word-break:break-all;}
+.scrolltab .ulBigPic .sMore{height:24px;line-height:24px;}
+.scrolltab .ulBigPic .sMore a{color:#841;}
+.scrolltab .ulBigPic .sTitle a{color:#333;}
+.scrolltab .ulBigPic .sTitle a:hover{color:#840;}
+.scrolltab .sLeftBtnA,.scrolltab .sLeftBtnASel,.scrolltab .sLeftBtnABan,.scrolltab .sRightBtnA,.scrolltab .sRightBtnASel,.scrolltab .sRightBtnABan{width:38px;height:86px;display:block;position:absolute;top:190px;background:url(../images/bgArt.png) no-repeat;}
+.scrolltab .sLeftBtnA,.scrolltab .sLeftBtnASel,.scrolltab .sRightBtnA,.scrolltab .sRightBtnASel{cursor:pointer;}
+.scrolltab .sLeftBtnA,.scrolltab .sLeftBtnASel,.scrolltab .sLeftBtnABan{left:10px;}
+.scrolltab .sLeftBtnA{background-position:-5px -2px;}
+.scrolltab .sLeftBtnASel{background-position:-80px 0;}
+.scrolltab .sLeftBtnABan{background-position:-161px 0;}
+.scrolltab .sRightBtnA,.scrolltab .sRightBtnASel,.scrolltab .sRightBtnABan{right:10px;}
+.scrolltab .sRightBtnA{background-position:-36px 0;}
+.scrolltab .sRightBtnASel{background-position:-116px 0;}
+.scrolltab .sRightBtnABan{background-position:-192px 0;}
+.scrolltab .dSmallPicBox{width:988px;height:154px;position:relative;}
+.scrolltab .dSmallPic{width:882px;height:144px;position:absolute;left:53px;top:0px;overflow:hidden;}
+.scrolltab .dSmallPic ul{position:absolute;}
+.scrolltab .dSmallPic li{width:141px;height:139px;border:1px solid #fff;padding:3px 2px 0;float:left;display:inline;cursor:pointer;overflow:hidden;}
+.scrolltab .dSmallPic .sPic{width:141px;height:106px;display:block;}
+.scrolltab .dSmallPic .sPic img{border:1px solid #ddd;padding:2px;}
+.scrolltab .dSmallPic .sTitle{width:141px;height:30px;line-height:30px;display:block;text-align:center;color:#333;overflow:hidden;}
+.scrolltab .dSmallPic .liSelected{border-color:#e9c184;}
+.scrolltab .dSmallPic .liSelected .sPic img{border-color:#fff;}
+.scrolltab .sLeftBtnB,.scrolltab .sLeftBtnBSel,.scrolltab .sLeftBtnBBan,.scrolltab .sRightBtnB,.scrolltab .sRightBtnBSel,.scrolltab .sRightBtnBBan{width:18px;height:37px;display:block;position:absolute;top:45px;background:url(../images/bgArt.png) no-repeat;}
+.scrolltab .sLeftBtnB,.scrolltab .sLeftBtnBSel,.scrolltab .sRightBtnB,.scrolltab .sRightBtnBSel{cursor:pointer;}
+.scrolltab .sLeftBtnB,.scrolltab .sLeftBtnBSel,.scrolltab .sLeftBtnBBan{left:20px;}
+.scrolltab .sLeftBtnB{background-position:0 -87px;}
+.scrolltab .sLeftBtnBSel{background-position:-36px -87px;}
+.scrolltab .sLeftBtnBBan{background-position:-73px -87px;}
+.scrolltab .sRightBtnB,.scrolltab .sRightBtnBSel,.scrolltab .sRightBtnBBan{right:20px;}
+.scrolltab .sRightBtnB{background-position:-16px -87px;}
+.scrolltab .sRightBtnBSel{background-position:-52px -87px;}
+.scrolltab .sRightBtnBBan{background-position:-88px -87px;}

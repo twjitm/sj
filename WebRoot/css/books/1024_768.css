@@ -1,0 +1,73 @@
+body{ background:#fff;}
+.w_100_l{ width:100%; height:auto; display:inline; float:left;}
+.top_title{ background:url(../Images/top_title_bg.jpg) 0 0 repeat-x; height:42px;}
+.top_title .main p{ width:100%; height:42px; display:inline; text-align:center; float:left;}
+.top_title .main p a{ font:12px/42px Arial, "微软雅黑"; color:#fff; text-decoration:underline;}
+.top_title .main p a:hover{ opacity:0.7;}
+
+
+.main{ width:960px; height:auto; margin:0 auto;}
+.top_banner{ width:100%; height:auto; display:inline; float:left; position:relative;}
+.top_logo{ width:246px; height:67px; display:inline; float:left; overflow:hidden; margin-top:25px;}
+.top_logo img{ width:auto; height:auto; display:inline; float:left;}
+.top_menu{ width:460px; height:auto; display:inline; float:left; margin-left:30px;}
+.top_menu ul{ width:100%; height:auto; display:inline; float:left;}
+.top_menu ul li{ padding:15px 5px 3px; margin-left:10px; float:left; background:#fff; border-bottom:1px solid #fff;}
+.top_menu ul li a{ font:13px/20px Arial, Helvetica, sans-serif; color:#333; text-decoration:none;}
+.top_menu ul li:hover,.top_menu ul li.sel{ border-bottom:1px solid #bcb79c; background:#f6f5ea;}
+
+.top_shop_cur{ width:79px; height:50px; display:inline;position:absolute; top:30px; right:10px; z-index:100;}
+.top_shop_cur img{ width:auto; height:auto; display:inline; float:left;}
+.index_img{ width:940px; height:300px; display:inline; float:left; margin-left:10px; margin-top:20px;}
+.index_hr{ width:940px; border-bottom:5px solid #f2f1e2; float:left; margin-top:35px; margin-left:10px;}
+.content{ width:940px; height:auto; display:inline; float:left; overflow:hidden; margin-left:10px;}
+.h1_book_title{ width:940px; height:30px; margin:30px 0 10px 10px; font:15px/30px "微软雅黑"; color:#998a62;}
+.content ul{ width:940px; height:auto; /* float:left; */ overflow:hidden;}
+.content ul li{height:auto; overflow:hidden;  margin-right:10px; margin-bottom:5px;}
+.content ul .odd{height:200px;}
+.content ul .leaveing{height:auto;}
+.content ul li dd{  height:auto; width:160px;  margin-right:10px;}
+.content ul li dt{  */height:auto;  display:inline;  float:left; /* position:relative;top:-150px;left:116px; */}
+.col-md-12 .content .haha{  */height:auto;  display:inline;  float:left; position:relative;top:-150px;left:116px;}
+.content ul li dt .book_title{ width:100%; font:16px/25px Arial; color:#eb4c89;}
+.content ul li dt .book_title a{ text-decoration:none; color:#eb4c89;}
+.content ul li dt .book_inline{ width:100%; font:12px/25px Arial; color:#998f77; }
+.content ul li dt .book_buy{ border:1px solid #4bb777; background:#4bb777; background-image:linear-gradient(#4bb777, #4bb777); padding:5px 8px; text-decoration:none; color:#fff;
+ border-radius:3px; -moz-border-radius:3px; -webkit-border-radius:3px; -o-border-radius:3px;
+ box-shadow:0 1px 2px rgba(0, 0, 0, 0.1); -webkit-box-shadow:0 1px 2px rgba(0,0,0,0.1);-o-box-shadow:0 1px 2px rgba(0,0,0,0.1); display:inline; text-transform:uppercase; letter-spacing:0.1em;
+}
+.content_press{ width:940px; height:auto; display:inline; float:left; margin-left:10px; margin-top:20px;}
+.content_press .press_porsen_01{ width:470px; height:auto; display:inline; float:left;}
+.content_press .press_porsen_01 h1{ width:470px; height:25px; font:14px/25px Arial, Helvetica, sans-serif; color:#997e11; text-transform:uppercase; font-weight:500;}
+.content_press .press_porsen_01 dl{ width:470px; height:auto; display:inline; float:left; overflow:hidden;}
+.content_press .press_porsen_01 dl dd{ width:90px; height:90px; display:inline; float:left; overflow:hidden; margin-right:10px;}
+.content_press .press_porsen_01 dl dt{ width:370px; height:auto; display:inline; float:left;}
+.content_press .press_porsen_01 dl dt .date, .press_porsen_02 dt .date{ font:12px/25px Arial, Helvetica, sans-serif; color:#8893b0; text-transform:uppercase;}
+.content_press .press_porsen_01 dl dt .book_title, .press_porsen_02 dt .book_title{ font:16px/25px Arial, Helvetica, sans-serif; color:#ea4c89;}
+.content_press .press_porsen_01 dl dt .book_title a , .press_porsen_02 dt .book_title a{ color:#ea4c89; text-decoration:none;}
+.content_press .press_porsen_01 dl dt .book_title a:hover, .press_porsen_02 dt .book_title a:hover{ color:#997e11;}
+.content_press .press_porsen_01 dl dt .book_intro,.press_porsen_02 dt .book_intro{ font:12px/20px Arial, Helvetica, sans-serif; color:#333;}
+.content_press .press_porsen_01 dl dt .book_intro a,.press_porsen_02 dt .book_intro a{ color:#ea4c89;}
+.content_press .press_porsen_01 dl dt .book_intro a:hover,.press_porsen_02 dt .book_intro a:hover{ color:#997e11;}
+.press_porsen_02{ width:460px; height:auto; display:inline; float:right;}
+.press_porsen_02 h1{ width:460px; height:25px; display:inline; float:left; font:12px/25px Arial, Helvetica, sans-serif; text-transform:none; text-align:right;}
+.press_porsen_02 h1 .span_1{ width:auto; padding-left:13px; background:url(../Images/icon_tel.jpg) left center no-repeat; margin-left:10px; float:right;}
+.press_porsen_02 h1 .span_2{ float:right; margin-left:15px;}
+.press_porsen_02 h1 span a{ color:#f15c89;}
+.press_porsen_02 dd{ width:90px; height:90px; text-align:center; float:left; display:inline; overflow:hidden; margin-right:10px;}
+.press_porsen_02 dt{ width:360px; height:auto; display:inline; float:left;}
+
+.news_title{ width:940px; height:25px; float:left; margin-top:25px; margin-left:10px; font:14px/25px Arial, Helvetica, sans-serif; text-transform:uppercase; color:#997e45;}
+.news_title_1{ width:940px; height:25px; float:left; margin-left:10px;}
+.news_title_1 .span_1{ font:12px/25px Arial, Helvetica, sans-serif; color:#333; float:left;}
+.news_title_1 .span_2{ width:294px; height:33px; display:inline; float:right; margin-right:20px;}
+.footer{ width:940px; height:50px; display:inline; float:left; margin-left:10px;font:12px/50px Arial, Helvetica, sans-serif; padding-top:5px;}
+.footer a{ color:#f57389; float:left; margin-left:15px;}
+.footer .span_1{ width:auto; height:50px; color:#666; float:left;}
+.footer a.a1{ padding-left:15px; background:url(../Images/icon_tel.jpg) left center no-repeat;}
+.footer a.a2{ padding-left:15px; background:url(../Images/icon_bird.jpg) left center no-repeat;}
+.footer .span_2{ width:auto; height:50px; float:right; margin-right:20px;font:12px/50px Arial, Helvetica, sans-serif;}
+.footer .span_2 b{ font:12px/50px Arial, Helvetica, sans-serif; color:#666; float:left;}
+.footer .span_2 img{ float:left;}
+
+
